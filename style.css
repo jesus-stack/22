@@ -1,0 +1,397 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.contanier {
+  padding-left: 10px;
+}
+
+.nav-item{
+  position: relative;
+  transition: 0.2s;
+  overflow: hidden;
+}
+#etiq-a :hover{
+  color: #1BA0A7;
+}
+.nav-item:hover{
+ 
+  background-color:white;
+  box-shadow: 0 0 40px white,0 0 80px white,0 0 120px white;
+  font-size: larger;
+  text-transform: uppercase;
+  transition-delay: 1s;
+  
+}
+.nav-item span{
+position: absolute;
+display: block;
+}
+.nav-item span:nth-child(1){
+  top: 0;
+  left:-100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,white);
+}
+.nav-item:hover span:nth-child(1){
+  left:100%;
+  transition: 1s;
+}
+.nav-item span:nth-child(3){
+  bottom: 0;
+  right:-100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,white);
+}
+.nav-item:hover span:nth-child(3){
+  right:100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.nav-item span:nth-child(2){
+  top: -100%;
+  right:0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,white);
+}
+.nav-item:hover span:nth-child(2){
+  top:100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.nav-item span:nth-child(4){
+  bottom: -100%;
+  left:0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,white);
+}
+.nav-item:hover span:nth-child(4){
+  bottom:100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.nav-item {
+  font-size: 17px;
+  margin-left: 15px;
+  
+}
+.btn{
+  border:none;
+  
+}
+
+
+
+.navbar-brand {
+  font-size: 23px;
+}
+
+.contenedor {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 86.5%;
+}
+
+.texto {
+  color: black;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+.texto-dif {
+  color: black;
+  position: absolute;
+  top: 30%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+.page-footer {
+  color: white;
+  margin-top: 25px;
+}
+
+.container-fluid {
+  background-color: #1BA0A7;
+  margin: 0px;
+}
+
+.footer-copyright {
+  background-color: darkcyan;
+}
+
+.footer-copyright a {
+  color: black;
+}
+
+.text-uppercase {
+  padding-top: 15px;
+}
+
+.etiq-p {
+  padding-bottom: 15px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+@media (max-width: 800px) {
+  .carousel {
+    height: 300px;
+  }
+  .texto {
+    font-size: 30px;
+  }
+  .texto-dif {
+    font-size: 30px;
+  }
+  .carousel-item {
+    height: 110%;
+  }
+}
+
+.contenedor-principal {
+  font-size: 25px;
+  text-align: center;
+}
+
+.contenedor-principal h2 {
+  color: black;
+}
+.row {
+  margin-top: 25px;
+}
+
+.video {
+  height: 400px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.content-info {
+  background-color: darkcyan;
+}
+
+.content-cuadros {
+  margin-top: 3%;
+}
+
+.content-cuadros img {
+  height: 340px;
+  width: 400px;
+  padding-bottom: 2%;
+}
+
+.cuadro {
+  display: inline;
+}
+
+.mapa{
+  padding-bottom: 5%;
+}
+
+.redes-sociales{
+  text-align: center;
+}
+
+
+ .contact {
+  background: linear-gradient(rgb(221, 43, 177),#1BA0A7);
+  margin: 10px auto 10px auto;
+
+}
+
+
+.open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  pointer-events: none;
+}
+.open .layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: top;
+  animation: open 1s ease-in-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.open .layer:nth-child(1){
+  background:#03a9f4;
+  z-index: 2;
+  animation-delay: 4s;
+}
+
+
+@keyframes open {
+  0%{
+    transform: scaleY(1);
+  }
+  100%{
+    transform: scaleY(0);
+
+  }
+}
+
+.open .layer .loader{
+  position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotatex(60deg)
+  
+}
+.open .layer .loader span{
+position: absolute;
+display:block;
+border: 5px solid #fff;
+box-shadow: 0 5px 0 #ccc,inset 0 5px 0 #ccc;
+box-sizing: border-box;
+border-radius: 50%;
+animation: animate 3s ease-in-out forwards;
+}
+@keyframes animate{
+  0%,100%{
+    transform: translateZ(-100px)
+  }
+  50%{
+    transform: translateZ(100px)
+  }
+}
+.open .layer .loader span:nth-child(1){
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation-delay: 1.4s;
+}
+.open .layer .loader span:nth-child(2){
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  animation-delay: 1.3s;
+}
+.open .layer .loader span:nth-child(3){
+  top: 20;
+  left: 20;
+  bottom: 20;
+  right: 20;
+  animation-delay: 1.2s;
+}
+.open .layer .loader span:nth-child(4){
+  top: 30;
+  left: 30;
+  bottom: 30;
+  right:30;
+  animation-delay: 1.1s;
+}
+.open .layer .loader span:nth-child(5){
+  top: 40;
+  left: 40;
+  bottom: 40;
+  right: 40;
+  animation-delay: 1s;
+}
+.open .layer .loader span:nth-child(6){
+  top: 50;
+  left: 50;
+  bottom: 50;
+  right:50;
+  animation-delay: 0.9s;
+}
+.open .layer .loader span:nth-child(7){
+  top: 60;
+  left: 60;
+  bottom: 60;
+  right: 60;
+  animation-delay: 0.8s;
+}
+.open .layer .loader span:nth-child(8){
+  top: 70;
+  left: 70;
+  bottom:70;
+  right: 70;
+  animation-delay: 0.7s;
+}
+.open .layer .loader span:nth-child(9){
+  top: 80;
+  left: 80;
+  bottom: 80;
+  right: 80;
+  animation-delay: 0.6s;
+}
+.open .layer .loader span:nth-child(10){
+  top: 90;
+  left: 90;
+  bottom: 90;
+  right: 90;
+  animation-delay: 0.5s;
+}
+.open .layer .loader span:nth-child(11){
+  top: 100;
+  left: 100;
+  bottom: 100;
+  right: 100;
+  animation-delay: 0.4s;
+}
+.open .layer .loader span:nth-child(12){
+  top: 110;
+  left: 110;
+  bottom: 110;
+  right: 110;
+  animation-delay: 0.3s;
+}
+.open .layer .loader span:nth-child(13){
+  top: 120;
+  left: 120;
+  bottom: 120;
+  right: 120;
+  animation-delay: 0.2s;
+}
+.open .layer .loader span:nth-child(14){
+  top: 130;
+  left: 130;
+  bottom: 130;
+  right: 130;
+  animation-delay: 0.1s;
+}
+.open .layer .loader span:nth-child(15){
+  top: 140;
+  left: 140;
+  bottom: 140;
+  right: 140;
+  animation-delay: 0s;
+}
+
+.contact #multiselect{
+ background: white;
+
+}
+
+  
+
+
+
+
